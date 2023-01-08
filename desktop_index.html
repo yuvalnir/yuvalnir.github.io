@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>window.AWS_PLUS_SEARCH_URL = "https://fjzqu8qk47.execute-api.eu-west-1.amazonaws.com/ynet-premium-n-recipes-qa-2/get-articles";</script>
+    <meta name="viewport" content="width=1240">
+    <meta charset="UTF-8">
+    <title>preview</title>
+    <link href="/ynet.css" rel="stylesheet">
+    <style></style>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K69K2VK');
+    </script>
+    <script type="text/javascript" src="//www.ynet.co.il/Common/Api/Scripts/jquery-3.4.1.min.js"></script>
+
+    <!-- New Flowplayer scripts -->
+
+    <!--<script src='https://source-images-qa.ynet.co.il/static/Common/Api/Scripts/YitVideo.js'></script>-->
+
+    <script> window.fpToken = "eyJraWQiOiJ4U2ZXU1BxMWc5S0oiLCJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJjIjoie1wiYWNsXCI6NixcImlkXCI6XCJ4U2ZXU1BxMWc5S0pcIixcImRvbWFpblwiOltcInluZXQuY28uaWxcIl19IiwiaXNzIjoiRmxvd3BsYXllciJ9.79I56Jn993GYmssWK5TM2F_eJ7JX4ts1gK7MxGZ5iAZ2-PDdSBVaDJmTBdvfuO8hgNfIukEq1tVgc7E8qkKHpA"</script>
+    <script> window.analyticsCode = "UA-10772561-46"</script>
+    <script>window.fpIsFloating = 1 </script>
+    <script> window.siteID = "ynet"</script>
+
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script>google.ima.settings.setLocale("he");</script>
+
+    <script>window.dataLayer = []</script>
+    <script> window.defaultNativeVideoType = "flowplayer"</script>
+    <script> function YitPaywallCallback() {
+            YitPaywall.platform = 'WCM';
+            YitPaywall.freePath = "/plus";
+            YitPaywall.premiumPath = "";
+        }
+    </script>
+    <script type="text/javascript" src="//qa.ynet.co.il/Common/Api/Scripts/paywall.js" charset="UTF-8"></script>
+    <script>
+        !function (t, e) { "use strict"; var i = "classList", n = function (t, i) { var n = i || {}; this.trigger = t, this.rate = n.rate || 500, this.el = e.getElementsByClassName("iframe-lightbox")[0] || "", this.body = this.el ? this.el.getElementsByClassName("body")[0] : "", this.content = this.el ? this.el.getElementsByClassName("content")[0] : "", this.href = t.dataset.src || "", this.paddingBottom = t.dataset.paddingBottom || "", this.onOpened = n.onOpened, this.onIframeLoaded = n.onIframeLoaded, this.onLoaded = n.onLoaded, this.onCreated = n.onCreated, this.onClosed = n.onClosed, this.init() }; n.prototype.init = function () { var t = this; this.el || this.create(); var e = function (t, e) { var i, n, o, s; return function () { o = this, n = [].slice.call(arguments, 0), s = new Date; var a = function () { var d = new Date - s; d < e ? i = setTimeout(a, e - d) : (i = null, t.apply(o, n)) }; i || (i = setTimeout(a, e)) } }(function (e) { e.preventDefault(), t.open() }, this.rate); this.trigger.addEventListener("click", e) }, n.prototype.create = function () { var t = this, n = e.createElement("div"); this.el = e.createElement("div"), this.content = e.createElement("div"), this.body = e.createElement("div"), this.el[i].add("iframe-lightbox"), n[i].add("backdrop"), this.content[i].add("content"), this.body[i].add("body"), this.el.appendChild(n), this.content.appendChild(this.body), this.contentHolder = e.createElement("div"), this.contentHolder[i].add("content-holder"), this.contentHolder.appendChild(this.content), this.el.appendChild(this.contentHolder), e.body.appendChild(this.el), n.addEventListener("click", function () { t.close() }); var o = function () { t.isOpen() || (t.el[i].remove("is-showing"), t.body.innerHTML = "") }; this.el.addEventListener("transitionend", o, !1), this.el.addEventListener("webkitTransitionEnd", o, !1), this.el.addEventListener("mozTransitionEnd", o, !1), this.el.addEventListener("msTransitionEnd", o, !1), this.callCallback(this.onCreated, this) }, n.prototype.loadIframe = function () { var t = this; this.iframeId = "iframe-lightbox" + Date.now(), this.body.innerHTML = '<iframe src="' + this.href + '" name="' + this.iframeId + '" id="' + this.iframeId + '" onload="this.style.opacity=1;" style="opacity:0;border:none;" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" height="166" frameborder="no"></iframe>', function (n, o) { e.getElementById(n).onload = function () { this.style.opacity = 1, o[i].add("is-loaded"), t.callCallback(t.onIframeLoaded, t), t.callCallback(t.onLoaded, t) } }(this.iframeId, this.body) }, n.prototype.open = function () { this.loadIframe(), this.paddingBottom ? this.content.style.paddingBottom = this.paddingBottom : this.content.removeAttribute("style"), this.el[i].add("is-showing"), this.el[i].add("is-opened"), this.callCallback(this.onOpened, this) }, n.prototype.close = function () { this.el[i].remove("is-opened"), this.body[i].remove("is-loaded"), this.callCallback(this.onClosed, this) }, n.prototype.isOpen = function () { return this.el[i].contains("is-opened") }, n.prototype.callCallback = function (t, e) { "function" == typeof t && t.bind(this)(e) }, t.IframeLightbox = n }("undefined" != typeof window ? window : this, document);
+    </script>
+
+    <script>
+        var YITSiteWidgets = YITSiteWidgets || [];
+    </script>
+
+    <script type="text/javascript" src="/widgets.js" defer></script>
+    <script type="text/javascript" src="//cdn.taboola.com/libtrc/ynet-ynetnews/loader.js"></script>
+
+
+    <script>
+        function hpbClickTrans() {
+            console.log("comercial link pressed . invoking hpbClickTrans()")
+        }
+    </script>
+    <script>
+        window._taboola = window._taboola || [];
+        window._taboola.push({ article: 'auto' });
+        !function (e, f, u) {
+            e.async = 1;
+            e.src = u;
+            f.parentNode.insertBefore(e, f);
+        }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            '//cdn.taboola.com/libtrc/ynet-ynetnews/loader.js');
+
+    </script>
+    <script>
+        window.dcPath = "8.Central-1.Hom";
+        window.video_ad_yncd = -1;
+        window.video_ad_iu = "/6870/ynet/video_desktop/default";
+        window.video_ad_iu_mobile = "/6870/ynet/video_mobile/default"
+        window.video_ad_description_url = "http://www.ynet.co.il/home/0,7340,L-8,00.html";
+        window.video_analytics_src = "ynet";
+    </script>
+
+    <script data-cfasync='false'>
+        window.interdeal = {
+            sitekey: '51b8d9a19f5dbda90768437500d33a0f',
+            Position: 'Left',
+            Menulang: 'HE'
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <div class="hContainer ynet grid1280_2 verundefined">
+                <script>window.dateFormat = "dmy", window.timezone = "Asia/Jerusalem", window.languageCode = "he-IL"</script>
+                <span><span id="rJZN3aIMJcs"></span>
+                    <script>window.YITSiteWidgets.push(['rJZN3aIMJcs', 'SiteAnalyticsInjector', { "analyticsObject": { "dc_path": "", "page_title": "בדיקות - יובל", "cid": "", "yid": "", "ad_blocker": false, "user_status": 0 }, "mainClassName": "hContainer" }]);</script>
+                </span>
+                <script>
+                    window.currentPlayingYoutubePlayer = window.currentPlayingYoutubePlayer || null;
+                    window.YoutubeAPIControlller = {
+                        _queue: [],
+                        _isLoaded: false,
+
+                        load: function (component) {
+                            // if the API is loaded just create the player
+                            if (this._isLoaded) {
+                                component.createPlayer()
+                            } else {
+                                this._queue.push(component)
+                            }
+                        },
+
+                        loadAPI: function () {
+                            // load the api
+                            var tag = document.createElement('script');
+                            tag.src = "https://www.youtube.com/iframe_api";
+                            var firstScriptTag = document.getElementsByTagName('script')[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                            var that = this;
+                            window.onYouTubeIframeAPIReady = function () {
+                                that._isLoaded = true
+                                for (let i = that._queue.length; i--;) {
+                                    that._queue[i].createPlayer()
+                                }
+                                that._queue = []
+                            }
+                        },
+                    }
+                    setTimeout(function () { window.YoutubeAPIControlller.loadAPI() }, 1000);
+                </script><span><span id="H1z43aLM19s"></span>
+                    <script>window.YITSiteWidgets.push(['H1z43aLM19s', 'SiteLinkLightBoxInjector', {}]);</script>
+                </span><span><span id="Hk7Vn6LGy9s"></span>
+                    <script>window.YITSiteWidgets.push(['Hk7Vn6LGy9s', 'SiteScrollToTopButton', {}]);</script>
+                </span>
+                <div style="width:1240px;direction:ltr;margin:0 auto" class="RelativeElementsContainer site_page_root">
+                    <div class="layoutContainer"
+                        style="position:relative;min-height:606px;padding-bottom:0;width:1240px;margin:0 auto;box-sizing:border-box">
+                        <div tabindex="0" class="layoutItem radio-schedule"
+                            style="position:absolute;top:0;left:417px;height:591px;width:823px">
+                            <div style="height:">
+                                <div class="radio-schedule-wrapper"><span><span id="S1nSlnTUfyco">
+                                            <div class="radio-schedule-component">
+                                                <div class="radio-schedule-media-box"><img
+                                                        src="https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg"
+                                                        class="media-box-background" />
+                                                    <div class="live-box"><img class="radio-player-equalizer-gif"
+                                                            src="https://www.ynet.co.il/images/equalizer.gif" />LIVE
+                                                    </div>
+                                                    <div class="radio-player-btn-container ">
+                                                        <div class="audio-play-button-wrapper"><button
+                                                                class="audio-play-button" aria-label="play">
+                                                                <div class="audio-play-button-status "></div>
+                                                            </button></div>
+                                                    </div>
+                                                    <div class="black-fade">
+                                                        <div class="info-box">
+                                                            <div class="hours-row">
+                                                                <div class="headphones"></div>14:00 - 16:59
+                                                            </div>
+                                                            <div class="box-title">מהדורת ערב בחסות ידיעות טכנולוגיות
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-list-row">
+                                                    <div class="schedule-list-header">
+                                                        <div class="title">לוח שידורים</div>
+                                                    </div>
+                                                    <div class="schedule-row-wrapper">
+                                                        <div class="white-fade-right">
+                                                            <div class="schedule-list-arrow right"></div>
+                                                        </div>
+                                                        <div class="schedule-list">
+                                                            <div class="schedule-list-item passed"
+                                                                id="schedule-list-item_4">
+                                                                <div class="broadcast-hours"> 11:00 - 11:59</div><span
+                                                                    class="item-title">מהדורת ערב בחסות ידיעות
+                                                                    טכנולוגיות</span>
+                                                            </div>
+                                                            <div class="schedule-list-item passed"
+                                                                id="schedule-list-item_5">
+                                                                <div class="broadcast-hours"> 12:00 - 12:59</div><a
+                                                                    class="item-title" id="SkaBehTLGy9j"
+                                                                    href="https://dev-v3.ynet.co.il/article/rys7vhuzs">לייב
+                                                                    כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה
+                                                                    כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה
+                                                                    כותרת ארוכה כותרת ארוכה</a>
+                                                            </div>
+                                                            <div class="schedule-list-item passed"
+                                                                id="schedule-list-item_6">
+                                                                <div class="broadcast-hours"> 13:00 - 13:59</div><a
+                                                                    class="item-title" id="B10Be3TLGJ9i"
+                                                                    href="https://dev-v3.ynet.co.il/news">תוכנית הבוקר
+                                                                    עם מי שנצליח להשיג שער בשעות האלה</a>
+                                                            </div>
+                                                            <div class="schedule-list-item " id="schedule-list-item_7">
+                                                                <div class="broadcast-live">
+                                                                    <div class="red-dot"></div>
+                                                                    <div class="live-title">עכשיו בשידור</div>
+                                                                </div><span class="item-title">מהדורת ערב בחסות ידיעות
+                                                                    טכנולוגיות</span>
+                                                            </div>
+                                                            <div class="schedule-list-item " id="schedule-list-item_8">
+                                                                <div class="broadcast-hours"> 17:00 - 21:59</div><a
+                                                                    class="item-title" id="HJ1IxhpUGy9o"
+                                                                    href="https://dev-v3.ynet.co.il/news">תוכנית הבוקר
+                                                                    עם מי שנצליח להשיג שער בשעות האלה</a>
+                                                            </div>
+                                                            <div class="schedule-list-item " id="schedule-list-item_9">
+                                                                <div class="broadcast-hours"> 22:00 - 07:59</div><span
+                                                                    class="item-title">מהדורת ערב בחסות ידיעות
+                                                                    טכנולוגיות</span>
+                                                            </div>
+                                                            <div class="schedule-list-item " id="schedule-list-item_10">
+                                                                <div class="broadcast-hours">מחר | 08:00 - 10:59</div><a
+                                                                    class="item-title" id="rylIeh68G1qj"
+                                                                    href="https://dev-v3.ynet.co.il/news">תוכנית הבוקר
+                                                                    עם מי שנצליח להשיג שער בשעות האלה</a>
+                                                            </div>
+                                                            <div class="schedule-list-item " id="schedule-list-item_11">
+                                                                <div class="broadcast-hours">מחר | 11:00 - 11:59</div>
+                                                                <span class="item-title">מהדורת ערב בחסות ידיעות
+                                                                    טכנולוגיות</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="white-fade-left">
+                                                            <div class="schedule-list-arrow left"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <script>window.YITSiteWidgets.push(['S1nSlnTUfyco', 'RadioScheduleComponent', { "liveBroadCastSource": "https://yradio.livecdn.biz/ynet-live", "liveBroadCastDVRSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-000000000-now.m3u8", "radioScheduleList": [{ "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2022-12-31T12:00:00.000Z", "endProgram": "2022-12-31T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672488000-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2022-12-31T15:00:00.000Z", "endProgram": "2022-12-31T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672498800-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2022-12-31T20:00:00.000Z", "endProgram": "2023-01-01T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672516800-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-01T06:00:00.000Z", "endProgram": "2023-01-01T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672552800-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-01T09:00:00.000Z", "endProgram": "2023-01-01T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672563600-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-01T10:00:00.000Z", "endProgram": "2023-01-01T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672567200-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-01T11:00:00.000Z", "endProgram": "2023-01-01T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672570800-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-01T12:00:00.000Z", "endProgram": "2023-01-01T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672574400-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-01T15:00:00.000Z", "endProgram": "2023-01-01T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672585200-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-01T20:00:00.000Z", "endProgram": "2023-01-02T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672603200-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-02T06:00:00.000Z", "endProgram": "2023-01-02T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672639200-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-02T09:00:00.000Z", "endProgram": "2023-01-02T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672650000-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-02T10:00:00.000Z", "endProgram": "2023-01-02T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672653600-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-02T11:00:00.000Z", "endProgram": "2023-01-02T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672657200-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-02T12:00:00.000Z", "endProgram": "2023-01-02T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672660800-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-02T15:00:00.000Z", "endProgram": "2023-01-02T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672671600-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-02T20:00:00.000Z", "endProgram": "2023-01-03T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672689600-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-03T06:00:00.000Z", "endProgram": "2023-01-03T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672725600-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-03T09:00:00.000Z", "endProgram": "2023-01-03T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672736400-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-03T10:00:00.000Z", "endProgram": "2023-01-03T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672740000-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-03T11:00:00.000Z", "endProgram": "2023-01-03T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672743600-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-03T12:00:00.000Z", "endProgram": "2023-01-03T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672747200-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-03T15:00:00.000Z", "endProgram": "2023-01-03T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672758000-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-03T20:00:00.000Z", "endProgram": "2023-01-04T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672776000-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-04T06:00:00.000Z", "endProgram": "2023-01-04T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672812000-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-04T09:00:00.000Z", "endProgram": "2023-01-04T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672822800-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-04T10:00:00.000Z", "endProgram": "2023-01-04T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672826400-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-04T11:00:00.000Z", "endProgram": "2023-01-04T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672830000-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-04T12:00:00.000Z", "endProgram": "2023-01-04T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672833600-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-04T15:00:00.000Z", "endProgram": "2023-01-04T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672844400-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-04T20:00:00.000Z", "endProgram": "2023-01-05T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672862400-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-05T06:00:00.000Z", "endProgram": "2023-01-05T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672898400-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-05T09:00:00.000Z", "endProgram": "2023-01-05T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672909200-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-05T10:00:00.000Z", "endProgram": "2023-01-05T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672912800-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-05T11:00:00.000Z", "endProgram": "2023-01-05T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672916400-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-05T12:00:00.000Z", "endProgram": "2023-01-05T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672920000-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-05T15:00:00.000Z", "endProgram": "2023-01-05T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672930800-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-05T20:00:00.000Z", "endProgram": "2023-01-06T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672948800-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-06T06:00:00.000Z", "endProgram": "2023-01-06T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672984800-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-06T09:00:00.000Z", "endProgram": "2023-01-06T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672995600-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-06T10:00:00.000Z", "endProgram": "2023-01-06T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1672999200-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-06T11:00:00.000Z", "endProgram": "2023-01-06T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673002800-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-06T12:00:00.000Z", "endProgram": "2023-01-06T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673006400-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-06T15:00:00.000Z", "endProgram": "2023-01-06T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673017200-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-06T20:00:00.000Z", "endProgram": "2023-01-07T05:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673035200-35999.m3u8", "startTime": "22:00", "endTime": "07:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-07T06:00:00.000Z", "endProgram": "2023-01-07T08:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673071200-10799.m3u8", "startTime": "08:00", "endTime": "10:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-07T09:00:00.000Z", "endProgram": "2023-01-07T09:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673082000-3599.m3u8", "startTime": "11:00", "endTime": "11:59" }, { "title": "לייב כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה כותרת ארוכה", "startProgram": "2023-01-07T10:00:00.000Z", "endProgram": "2023-01-07T10:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1615679/one1615679_0_0_785_443_0_x-large.jpg", "anchor": "יובל כאילו דה!", "hideHours": false, "linkData": { "type": "article", "link": { "articleType": "article", "specialData": {}, "id": "rys7vhuzs", "href": "https://dev-v3.ynet.co.il/article/rys7vhuzs", "catId": 19954, "catName": "אוטומציה סאניטי", "catLink": "https://dev-v3.ynet.co.il/category/19954", "mainCatId": 8, "path": "8.Central-19953.Dev.Automation.Sanity-19954.Automatnion.Sanity", "isPay": false, "pubDate": "2022-10-06T08:57:14.035Z", "author": "SANITY_AUTHOR_TEST", "firstAuthorImage": null, "hasVideo": false, "subchannelName": "דף הבית", "subchannelIcon": null } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673085600-3599.m3u8", "startTime": "12:00", "endTime": "12:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-07T11:00:00.000Z", "endProgram": "2023-01-07T11:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673089200-3599.m3u8", "startTime": "13:00", "endTime": "13:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-07T12:00:00.000Z", "endProgram": "2023-01-07T14:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": false, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673092800-10799.m3u8", "startTime": "14:00", "endTime": "16:59" }, { "title": "תוכנית הבוקר עם מי שנצליח להשיג שער בשעות האלה", "startProgram": "2023-01-07T15:00:00.000Z", "endProgram": "2023-01-07T19:59:59.999Z", "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618714/one1618714_15_0_785_443_0_x-large.jpg", "anchor": "מישהו שער", "hideHours": false, "linkData": { "type": "category", "link": { "id": 2, "href": "https://dev-v3.ynet.co.il/news", "cat_id_title": null, "statisticName": "news", "path": "2.news-1.Home" } }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673103600-17999.m3u8", "startTime": "17:00", "endTime": "21:59" }, { "title": "מהדורת ערב בחסות ידיעות טכנולוגיות", "startProgram": "2023-01-07T20:00:00.000Z", "endProgram": null, "isProgramLive": true, "image": "https://ynet-qa-pic1.yit.co.il/picserver5/crop_images/2022/08/30/one1618594/one1618594_13_0_785_443_0_x-large.jpg", "anchor": "בוסגה", "hideHours": true, "linkData": { "type": null, "link": null }, "linkTarget": { "lightBoxOpacity": 70, "lightBoxWidth": 803, "lightBoxBgColor": "#000000", "linkOpenType": "same", "lightBoxHeight": 700 }, "dvrSource": "https://stream.ynethd.com/ynet/live/playlist_dvr_range-1673121600-now.m3u8", "startTime": "22:00", "endTime": "Invalid date" }], "startingIndex": 7, "offsetStart": 3, "offsetEnd": 5 }]);</script>
+                                    </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <script type="text/javascript">(function scriptFunc() {
+                            window["controlTickerAnimation"] = () => {
+                                document.body.setAttribute('id', 'INDdummy');
+                                var node = document.createElement("button");
+                                var ticker = document.getElementsByClassName("animationDiv")[0];
+                                node.setAttribute("class", "playTicker");
+                                node.setAttribute("id", "tickerControl");
+                                var tickerTab = document.getElementsByClassName("tickerTab")[0];
+                                if (tickerTab !== undefined && ticker !== undefined) {
+                                    tickerTab.appendChild(node);
+                                    const toggleTickerControlButton = () => {
+                                        if (node.classList.contains('playTicker')) {
+                                            node.classList.remove('playTicker');
+                                            ticker.classList.remove("pause");
+                                        }
+                                        else {
+                                            node.classList.add('playTicker');
+                                            ticker.classList.add("pause");
+                                        }
+                                    };
+                                    node.addEventListener('click', toggleTickerControlButton);
+                                    ticker.classList.add("pause");
+                                }
+                            };
+                        })()</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.YitVideo.Constructor({
+            containerAttrPrefix: 'data-yitvideo',
+            dynamicPlayerType: false,
+            flaotOnScroll: true,
+            nextVideo: false,
+            popularity: true,
+            siteName: 'ynet', //{'ynet','vesty',ynetnews', ...}
+            dcPath: { dcPath },
+            autoplay: false,
+            // adTagUrl: {ad_tag},
+            callback: function () {
+                document.querySelectorAll('.yitvideo_container').forEach(function (container) {
+                    container.style.height = 'unset';
+                    container.style.paddingTop = 'unset';
+                });
+            },
+            eventsCallback: function (event, data) {
+                //send gtm events here
+                switch (event) {
+                    case 'ready':
+                        console.log(event, data);
+                        break;
+                    case 'firstplay':
+                        console.log(event, data);
+                        break;
+                    case 'play':
+                        console.log(event, data);
+                        break;
+                    case 'pause':
+                        console.log(event, data);
+                        break;
+                    case 'progress':
+                        console.log(event, data);
+                        break;
+                    case 'contentplay':
+                        console.log(event, data);
+                        break;
+                    case 'ended':
+                        console.log(event, data);
+                        break;
+                    case 'ads-ad-started':
+                        console.log(event, data);
+                        break;
+                }
+            }
+        });
+    </script>
+    <!-- <script>
+        window.interdeal = {
+            sitekey: "51b8d9a19f5dbda90768437500d33a0f",
+            Position: "Left",
+            Menulang: "HE",
+            domains: {
+                js: "https://js.nagich.co.il/",
+                acc: "https://access.nagich.co.il/"
+            },
+        };
+        (function (doc, head, body) {
+            var coreCall = doc.createElement('script');
+            coreCall.src = 'https://js.nagich.co.il/core/4.1.1/accessibility.js';
+            coreCall.defer = true;
+            coreCall.integrity = 'sha512-Sa9czHEwHavqXKmdJEaYdtc0YzuvwZmRRZoovLeWq8Lp5R4ZB1LLCSBoQm6ivUfuncFOM+/9oR08+WCAcBH61Q==';
+            coreCall.crossOrigin = 'anonymous';
+            coreCall.setAttribute('data-cfasync', true);
+            body ? body.appendChild(coreCall) : head.appendChild(coreCall);
+        })(document, document.head, document.body);
+    </script> -->
+</body>
+
+</html>
